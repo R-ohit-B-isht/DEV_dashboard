@@ -65,7 +65,7 @@ export default function UserReports() {
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3, "2xl": 6 }}
+        columns={{ base: 1, md: 2, lg: 4, "2xl": 6 }}
         gap='20px'
         mb='20px'>
         <MiniStatistics
@@ -79,8 +79,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Earnings'
-          value='$350.4'
+          name='Impressions'
+          value='832'
         />
         <MiniStatistics
           startContent={
@@ -93,30 +93,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Spend this month'
-          value='$642.39'
-        />
-        <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
-        <MiniStatistics
-          endContent={
-            <Flex me='-16px' mt='10px'>
-              <FormLabel htmlFor='balance'>
-                <Avatar src={Usa} />
-              </FormLabel>
-              <Select
-                id='balance'
-                variant='mini'
-                mt='5px'
-                me='0px'
-                defaultValue='usd'>
-                <option value='usd'>USD</option>
-                <option value='eur'>EUR</option>
-                <option value='gba'>GBA</option>
-              </Select>
-            </Flex>
-          }
-          name='Your balance'
-          value='$1,000'
+          name='Total Audience'
+          value='832'
         />
         <MiniStatistics
           startContent={
@@ -127,8 +105,8 @@ export default function UserReports() {
               icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
             />
           }
-          name='New Tasks'
-          value='154'
+          name='Engagements'
+          value='832'
         />
         <MiniStatistics
           startContent={
@@ -141,8 +119,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Total Projects'
-          value='2935'
+          name='Engaged audience'
+          value='832'
         />
       </SimpleGrid>
 

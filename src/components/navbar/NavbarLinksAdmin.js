@@ -51,7 +51,7 @@ export default function HeaderLinks(props) {
 			p="10px"
 			borderRadius="30px"
 			boxShadow={shadow}>
-			<SearchBar mb={secondary ? { base: '10px', md: 'unset' } : 'unset'} me="10px" borderRadius="30px" />
+			
 			<Flex
 				bg={ethBg}
 				display={secondary ? 'flex' : 'none'}
@@ -72,6 +72,7 @@ export default function HeaderLinks(props) {
 				</Text>
 			</Flex>
 			<SidebarResponsive routes={routes} />
+			<SearchBar mb={secondary ? { base: '10px', md: 'unset' } : 'unset'} me="10px" borderRadius="30px" />
 			<Menu>
 				<MenuButton p="0px">
 					<Icon mt="6px" as={MdNotificationsNone} color={navbarIcon} w="18px" h="18px" me="10px" />

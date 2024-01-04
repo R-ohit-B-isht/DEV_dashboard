@@ -88,7 +88,7 @@ export default function AdminNavbar(props) {
         base: "calc(100vw - 6%)",
         md: "calc(100vw - 8%)",
         lg: "calc(100vw - 6%)",
-        xl: "calc(100vw - 2%)",
+        xl: "calc(100vw - 1.5%)",
         "2xl": "calc(100vw - 365px)",
       }}
     >
@@ -101,7 +101,7 @@ export default function AdminNavbar(props) {
         alignItems={{ xl: "center" }}
         mb={gap}
       >
-        <Box mb={{ sm: "8px", md: "0px" }}>
+        {/* <Box mb={{ sm: "8px", md: "0px" }}>
           <Breadcrumb>
             <BreadcrumbItem color={secondaryText} fontSize="sm" mb="5px">
               <BreadcrumbLink href="#" color={secondaryText}>
@@ -115,7 +115,7 @@ export default function AdminNavbar(props) {
               </BreadcrumbLink>
             </BreadcrumbItem>
           </Breadcrumb>
-          {/* Here we create navbar brand, based on route name */}
+
           <Link
             color={mainText}
             href="#"
@@ -135,8 +135,8 @@ export default function AdminNavbar(props) {
           >
             {brandText}
           </Link>
-        </Box>
-        <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
+        </Box> */}
+        <Box ms="auto" w={{ sm: "100%"}}>
           <AdminNavbarLinks
             onOpen={props.onOpen}
             logoText={props.logoText}

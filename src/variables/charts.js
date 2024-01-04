@@ -254,11 +254,12 @@ export const pieChartData = [63, 25, 12];
 export const lineChartDataTotalSpent = [
   {
     name: "Revenue",
+    type: 'area',
     data: [50, 64, 48, 66, 49, 68],
   },
   {
     name: "Profit",
-    data: [30, 40, 24, 46, 20, 46],
+    data: [30, 40, 24, 46,70, 46],
   },
 ];
 
@@ -333,4 +334,8 @@ export const lineChartOptionsTotalSpent = {
     },
   },
   color: ["#7551FF", "#39B8FF"],
+  fill: {
+    type:'solid',
+    opacity: [0.35, 1],
+  },
 };

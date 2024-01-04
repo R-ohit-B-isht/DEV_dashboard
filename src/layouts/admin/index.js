@@ -13,8 +13,8 @@ import routes from 'routes.js';
 export default function Dashboard(props) {
 	const { ...rest } = props;
 	// states and functions
-	const [ fixed ] = useState(false);
-	const [ toggleSidebar, setToggleSidebar ] = useState(false);
+	const [ fixed ] = useState(true);
+	const [ toggleSidebar, setToggleSidebar ] = useState(true);
 	// functions for changing the states from components
 	const getRoute = () => {
 		return window.location.pathname !== '/admin/full-screen-maps';
@@ -103,21 +103,23 @@ export default function Dashboard(props) {
 	return (
 		<Box>
 			<Box>
-				<SidebarContext.Provider
+				{/* <SidebarContext.Provider
 					value={{
 						toggleSidebar,
 						setToggleSidebar
-					}}>
-					<Sidebar routes={routes} display='none' {...rest} />
+					}}> */}
+					{/* <Sidebar routes={routes} display='none' {...rest} /> */}
 					<Box
-						float='right'
+						float='middle'
 						minHeight='100vh'
 						height='100%'
 						overflow='auto'
-						position='relative'
+						position='fixed'
 						maxHeight='100%'
-						w={{ base: '100%', xl: 'calc( 100% - 290px )' }}
-						maxWidth={{ base: '100%', xl: 'calc( 100% - 290px )' }}
+						w={{ base: '100%' }}
+						// , xl: 'calc( 100% - 290px )' }}
+						maxWidth={{ base: '100%' }}
+						// , xl: 'calc( 100% - 290px )' }}
 						transition='all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1)'
 						transitionDuration='.2s, .2s, .35s'
 						transitionProperty='top, bottom, width'
@@ -148,7 +150,7 @@ export default function Dashboard(props) {
 							<Footer />
 						</Box>
 					</Box>
-				</SidebarContext.Provider>
+				{/* </SidebarContext.Provider> */}
 			</Box>
 		</Box>
 	);

@@ -74,7 +74,7 @@ export function SidebarResponsive(props) {
   //  BRAND
 
   return (
-    <Flex display={{ sm: "flex", xl: "none" }} alignItems='center'>
+    <Flex display={{ sm: "flex"}} alignItems='center'>
       <Flex ref={btnRef} w='max-content' h='max-content' onClick={onOpen}>
         <Icon
           as={IoMenuOutline}
@@ -91,7 +91,7 @@ export function SidebarResponsive(props) {
         onClose={onClose}
         placement={document.documentElement.dir === "rtl" ? "right" : "left"}
         finalFocusRef={btnRef}>
-        <DrawerOverlay />
+        {/* <DrawerOverlay /> */}
         <DrawerContent w='285px' maxW='285px' bg={sidebarBackgroundColor}>
           <DrawerCloseButton
             zIndex='3'
@@ -110,6 +110,7 @@ export function SidebarResponsive(props) {
           </DrawerBody>
         </DrawerContent>
       </Drawer>
+      
     </Flex>
   );
 }

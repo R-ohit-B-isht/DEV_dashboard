@@ -90,7 +90,8 @@ export default function AdminNavbar(props) {
         lg: "calc(100vw - 6%)",
         xl: "calc(100vw - 350px)",
         "2xl": "calc(100vw - 365px)",
-      }}>
+      }}
+    >
       <Flex
         w='100%'
         flexDirection={{

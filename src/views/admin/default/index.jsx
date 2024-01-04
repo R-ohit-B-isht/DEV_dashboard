@@ -124,16 +124,17 @@ export default function UserReports() {
         />
       </SimpleGrid>
 
-      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-        <TotalSpent />
-        <WeeklyRevenue />
-      </SimpleGrid>
+      <Flex direction={{ base: 'column', md: 'row', xl: 'row' }} gap='20px' mb='20px'>
+        <TotalSpent flex={{ base: '1', md: '2', xl: '2' }} />
+        <DailyTraffic flex={{ base: '1', md: '1', xl: '1' }} />
+      </Flex>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
-        <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
         <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
-          <DailyTraffic />
           <PieCard />
+          <WeeklyRevenue />
+          
         </SimpleGrid>
+        <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
         <ComplexTable

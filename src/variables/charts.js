@@ -209,10 +209,11 @@ export const barChartOptionsConsumption = {
 };
 
 export const pieChartOptions = {
-  labels: ["Your files", "System", "Empty"],
-  colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+  labels: ["Current Week", "Last Week"],
+  colors: ["#7551FF", "#eb713c"],
   chart: {
-    width: "50px",
+    width: 380,
+    type: 'donut',
   },
   states: {
     hover: {
@@ -230,16 +231,26 @@ export const pieChartOptions = {
   hover: { mode: null },
   plotOptions: {
     donut: {
-      expandOnClick: false,
-      donut: {
-        labels: {
-          show: false,
-        },
-      },
+      size: "75%",
+      labels: {
+        show: true,
+        name: { show: false },
+            total: {
+              show: true,
+              showAlways: true,
+              formatter: function (w) {
+                const totals = w.globals.seriesTotals;
+
+                const result = totals.reduce((a, b) => a + b, 0);
+
+                return (result / 1000).toFixed(3);
+              }
+            }
+    },
     },
   },
   fill: {
-    colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
+    colors: ["#7551FF", "#eb713c"],
   },
   tooltip: {
     enabled: true,
@@ -247,7 +258,7 @@ export const pieChartOptions = {
   },
 };
 
-export const pieChartData = [63, 25, 12];
+export const pieChartData = [2000, 1500];
 
 // Total Spent Default
 

@@ -1,5 +1,6 @@
 // Chakra imports
-import { Box, Flex, Text, Select, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Text, Select, useColorModeValue, Icon, } from "@chakra-ui/react";
+import { RiArrowUpSFill ,RiArrowDownSFill} from "react-icons/ri";
 // Custom components
 import Card from "components/card/Card.js";
 import PieChart from "components/charts/PieChart";
@@ -18,7 +19,7 @@ export default function Conversion(props) {
     "unset"
   );
   return (
-    <Card p='20px' align='center' direction='column' w='100%' {...rest}>
+    <Card p='30px' align='center' direction='column' w='100%' {...rest}>
       <Flex
         px={{ base: "0px", "2xl": "10px" }}
         justifyContent='space-between'
@@ -26,18 +27,8 @@ export default function Conversion(props) {
         w='100%'
         mb='8px'>
         <Text color={textColor} fontSize='md' fontWeight='600' mt='4px'>
-          Your Pie Chart
+          Sales
         </Text>
-        <Select
-          fontSize='sm'
-          variant='subtle'
-          defaultValue='monthly'
-          width='unset'
-          fontWeight='700'>
-          <option value='daily'>Daily</option>
-          <option value='monthly'>Monthly</option>
-          <option value='yearly'>Yearly</option>
-        </Select>
       </Flex>
 
       <PieChart
@@ -55,37 +46,58 @@ export default function Conversion(props) {
         px='20px'
         mt='15px'
         mx='auto'>
-        <Flex direction='column' py='5px'>
-          <Flex align='center'>
-            <Box h='8px' w='8px' bg='brand.500' borderRadius='50%' me='4px' />
-            <Text
-              fontSize='xs'
-              color='secondaryGray.600'
-              fontWeight='700'
-              mb='5px'>
-              Your files
-            </Text>
-          </Flex>
-          <Text fontSize='lg' color={textColor} fontWeight='700'>
-            63%
-          </Text>
-        </Flex>
-        <VSeparator mx={{ base: "60px", xl: "60px", "2xl": "60px" }} />
-        <Flex direction='column' py='5px' me='10px'>
-          <Flex align='center'>
-            <Box h='8px' w='8px' bg='#6AD2FF' borderRadius='50%' me='4px' />
-            <Text
-              fontSize='xs'
-              color='secondaryGray.600'
-              fontWeight='700'
-              mb='5px'>
-              System
-            </Text>
-          </Flex>
-          <Text fontSize='lg' color={textColor} fontWeight='700'>
-            25%
-          </Text>
-        </Flex>
+        <Flex direction='column' py='5px' align='center' justify='center'>
+  <Flex justify='space-between' px='20px' pt='5px' w='100%' align='center'>
+    <Flex align='center' mb='20px'>
+      <Text
+        fontSize='sm'
+        fontWeight='700'
+        mt='4px'
+        me='12px'
+        color='secondaryGray.600'
+        alignContent='center'
+      >
+        Current Week
+      </Text>
+
+        <Text color='secondaryGray.600' fontSize='sm' fontWeight='500'>
+          2000
+        </Text>
+
+        <Icon as={RiArrowUpSFill} color='green.500' me='2px' mt='2px' />
+        <Text color='green.500' fontSize='sm' fontWeight='700'>
+          +0.3%
+        </Text>
+
+    </Flex>
+  </Flex>
+
+  <Flex justify='space-between' px='20px' pt='5px' w='100%' align='center'>
+    <Flex align='center' mb='20px'>
+      <Text
+        fontSize='sm'
+        fontWeight='700'
+        mt='4px'
+        me='12px'
+        color='secondaryGray.600'
+        alignContent='center'
+      >
+        Last Week
+      </Text>
+
+        <Text color='secondaryGray.600' fontSize='sm' fontWeight='500'>
+          1500
+        </Text>
+
+        <Icon as={RiArrowDownSFill} color='red.500' me='2px' mt='2px' />
+        <Text color='red.500' fontSize='sm' fontWeight='700'>
+          -0.3%
+        </Text>
+
+    </Flex>
+  </Flex>
+</Flex>
+
       </Card>
     </Card>
   );

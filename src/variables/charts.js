@@ -253,13 +253,13 @@ export const pieChartData = [63, 25, 12];
 
 export const lineChartDataTotalSpent = [
   {
-    name: "Revenue",
+    name: "Course Visit",
     type: 'area',
-    data: [50, 64, 48, 66, 49, 68],
+    data: [20, 64, 48, 66, 49, 68,22,55],
   },
   {
-    name: "Profit",
-    data: [30, 40, 24, 46,70, 46],
+    name: "Course Sale",
+    data: [30, 40, 24, 46,70, 46,60,20],
   },
 ];
 
@@ -277,7 +277,7 @@ export const lineChartOptionsTotalSpent = {
       color: "#4318FF",
     },
   },
-  colors: ["#4318FF", "#39B8FF"],
+  colors: ["#4318FF", "#eb713c"],
   markers: {
     size: 0,
     colors: "white",
@@ -305,7 +305,7 @@ export const lineChartOptionsTotalSpent = {
   },
   xaxis: {
     type: "numeric",
-    categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
+    categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB","MAR","APR"],
     labels: {
       style: {
         colors: "#A3AED0",
@@ -321,10 +321,18 @@ export const lineChartOptionsTotalSpent = {
     },
   },
   yaxis: {
-    show: false,
+    show: true,
+    labels: {
+    style: {
+      colors: "#A3AED0",
+      fontSize: "12px",
+      fontWeight: "500",
+    },},
   },
   legend: {
-    show: false,
+    position: 'top',
+    horizontalAlign: 'right',
+    floating: true,
   },
   grid: {
     show: false,
@@ -333,7 +341,7 @@ export const lineChartOptionsTotalSpent = {
       opacity: 0.5,
     },
   },
-  color: ["#7551FF", "#39B8FF"],
+  color: ["#7551FF", "#eb713c"],
   fill: {
     type:'solid',
     opacity: [0.35, 1],
